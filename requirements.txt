@@ -30,3 +30,4 @@ tensorboard
 termcolor
 urllib3
 Werkzeug
+gunicorn
