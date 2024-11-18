@@ -49,7 +49,7 @@ def upload_file():
             img = image.img_to_array(img)
             data = np.array([img])
             data = data.astype("float")/255
-            data = data.reshape(1,image_size,image_size,3)
+            data = data.reshape(1,64,64,3)
 
             result = model.predict(data)
             predicted = np.argmax(result)
@@ -67,7 +67,8 @@ def upload_file():
 
     return render_template("index.html", answer="")
 
+
+
 if __name__ == "__main__":
-    app.debug = True
     port = int(os.environ.get('PORT', 8080))
     app.run(host ='0.0.0.0',port = port)
