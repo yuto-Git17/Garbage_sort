@@ -28,7 +28,6 @@ requests
 scipy
 six
 tensorboard
-tensorflow-cpu
 termcolor
 urllib3
 Werkzeug
