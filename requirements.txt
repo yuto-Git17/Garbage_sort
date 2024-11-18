@@ -32,3 +32,4 @@ urllib3
 Werkzeug
 gunicorn
 tensorflow-cpu
+opencv-python  
