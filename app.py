@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, redirect, render_template, flash
+from flask import Flask, request, redirect, render_template, flash, Blueprint
 from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model # type: ignore
 from tensorflow.keras.preprocessing import image # type: ignore
@@ -16,6 +16,9 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif','webp'])
 
 app = Flask(__name__)
 app.secret_key = 'abcdefzyxdls'  # シークレットキーを設定
+
+add_app = Blueprint("images", __name__, static_url_path="/images", static_folder="./images")
+app.register_blueprint(add_app)
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
@@ -63,10 +66,6 @@ def upload_file():
             return redirect(request.url)\
 
     return render_template("index.html", answer="")
-
-@app.route("/")
-def hello():
-    return render_template("static_html")
 
 if __name__ == "__main__":
     app.debug = True
