@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content="device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content="ie=edge">
+    <title>Gomi no bunbetu</title>
+    <link rel='stylesheet' href="./static/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <h1>Gomi no bunbetu
+      <img class="header_img" src="./static/076728.jpg" alt="image">
+      </h1>
+    </header>
+      <h2> ゴミの分別をお手伝いします。</h2>
+      <p> 画像を送信してください。
+        <!-- フラッシュメッセージの表示 -->
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+        <div class="flash">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <form method='POST' enctype="multipart/form-data">
+            <input class='file_choose' type="file" name="file">
+            <input class='btn' value="click!"   type="submit">
+          <div class="answer">{{answer}}</div>
+        </form>
+      <footer>
+        <small>&copy; 2024 地球のためにできること, inc.</small>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+header {
+    backgronud-image:
+    url(',/Users/mac-yuto/Desktop/mnist_app/templates/images/076728.jpg');
+    background: linear-gradient(
+  350deg,
+  transparent 0%,
+  transparent 50%,
+  #4fc1c0 100%
+);
+}
+
+.header_img {
+    height: 50px;
+    margin: 0px 0px;
+}
+
+h1 {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 40px;
+    margin: 5px 0px 0px 10px;
+    text-align: center;
+    color: black
+}
+
+.main {
+    height: 320px;
+}
+
+h2 {
+    color: #444444;
+    margin: 50px 0px;
+    text-align: center;
+}
+
+p {
+    color: #444444;
+    margin: 70px 0px 20px 0px;
+    text-align: center;
+}
+
+div{
+    margin: 30px 0px 0px 0px;
+}
+
+.flash{
+    text-align: center;
+    color: red;
+}
+
+.answer {
+    color: #444444;
+    margin:30px 0px 40px 35px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin: 30px 10px 10px -30px;
+    position: static;
+}
+
+footer {
+    background-color: #F7F7F7;
+    height: 50px;
+    margin: 20px;
+    position: relative;
+}
+
+
+small {
+    margin: 15px 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
